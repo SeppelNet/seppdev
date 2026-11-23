@@ -214,3 +214,25 @@ h2 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
 .timeline.compact .when { margin-bottom: 0.1rem; }
 .timeline.compact ul { line-height: 1.4; }
 .timeline.compact > li { padding-bottom: calc(0.9rem * var(--sp)); }
+
+/* Versionsverlauf: aufklappbar */
+.tl-tools { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.btn-small { padding: 0.4rem 0.8rem; font-size: 0.88rem; border-radius: calc(0.5rem * var(--rs)); }
+.timeline.compact > li { padding-bottom: calc(0.55rem * var(--sp)); }
+.timeline details summary {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.15rem 0.75rem;
+  cursor: pointer; list-style: none; padding: 0.15rem 1.6rem 0.15rem 0; position: relative;
+}
+.timeline details summary::-webkit-details-marker { display: none; }
+.timeline details summary::after {
+  content: ""; position: absolute; right: 0.3rem; top: 0.55rem; width: 0.5rem; height: 0.5rem;
+  border-right: 2px solid var(--ink-soft); border-bottom: 2px solid var(--ink-soft);
+  transform: rotate(45deg); transition: transform .15s ease;
+}
+.timeline details[open] summary::after { transform: rotate(-135deg); top: 0.7rem; }
+.timeline details summary h3 { margin: 0; }
+.timeline details summary .when { margin: 0; font-size: 0.82rem; color: var(--ink-soft); }
+.timeline details summary .count { margin-left: auto; font-size: 0.8rem; color: var(--ink-soft); }
+.timeline > li.current details summary .when { color: var(--accent-ink); font-weight: 600; }
+.timeline details ul { margin: 0.35rem 0 0.3rem; }
+@media (prefers-reduced-motion: reduce) { .timeline details summary::after { transition: none; } }

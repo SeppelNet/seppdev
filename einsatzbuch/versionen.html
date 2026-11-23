@@ -15,7 +15,7 @@
 
 <div class="beta-bar">
   <div class="wrap">
-    <span><strong>Beta-Test:</strong> Einsatzbuch sucht neue Tester.</span>
+    <span><strong>Beta-Test:</strong> Einsatzbuch – Aufträge &amp; Abrechnung sucht neue Tester.</span>
     <a href="index.html#testen">Als Tester mitmachen</a>
   </div>
 </div>
@@ -38,28 +38,35 @@
 
   <section aria-labelledby="verlauf-titel">
     <h2 id="verlauf-titel" class="visually-hidden">Alle Versionen</h2>
+    <div class="tl-tools">
+      <button type="button" class="btn btn-ghost btn-plain btn-small" id="open-all">Alle aufklappen</button>
+      <button type="button" class="btn btn-ghost btn-plain btn-small" id="close-all">Alle zuklappen</button>
+    </div>
     <ol class="timeline compact">
       <li class="current">
-        <h3>Version 1.8</h3>
-        <p class="when">In Arbeit</p>
-        <ul>
+        <details open>
+          <summary><h3>Version 1.8</h3><span class="when">In Arbeit</span><span class="count">4 Änderungen</span></summary>
+          <ul>
           <li>Bugfix: Dubletten bei „Angaben prüfen“ nur bei gleichem Datum und Auftraggeber oder Bezeichnung</li>
           <li>Brutto/Netto je Auftraggeber mit festem Satz, einzelnen Sätzen oder keinem Abzug</li>
           <li>Ignorieren in allen Prüfungen, Hilfe-Ergänzungen, Sicherung für alle neuen Daten</li>
           <li>Versionsangaben auf 1.8, Support-Adresse info@seppdev.de, App-Name „Einsatzbuch – Aufträge &amp; Abrechnung“</li>
-        </ul>
+          </ul>
+        </details>
       </li>
       <li>
-        <h3>Version 1.7.1</h3>
-        <p class="when">Release-Stand</p>
-        <ul>
+        <details>
+          <summary><h3>Version 1.7.1</h3><span class="when">Release-Stand</span><span class="count">2 Änderungen</span></summary>
+          <ul>
           <li>Hilfe mit eigener Kategorie „Prüfungen“ und Suchtreffern</li>
           <li>Einstellungen: alle Bereiche zu, Sicherheit sichtbar, Ignorieren in der Sicherung</li>
-        </ul>
+          </ul>
+        </details>
       </li>
       <li>
-        <h3>Version 1.7</h3>
-        <ul>
+        <details>
+          <summary><h3>Version 1.7</h3><span class="count">7 Änderungen</span></summary>
+          <ul>
           <li>Verpasste Tage mit Fenster und „Später“, Menüpunkt „Offene Tage prüfen“</li>
           <li>Archiv für einzelne Tage, mit Übersicht je Auftraggeber</li>
           <li>Neuer Auftrag als aufklappbare Abschnitte mit Haken „Eingetragen“, Vorlagen, Start-Schritt</li>
@@ -67,51 +74,57 @@
           <li>Kalender-Erkennung „Einsatzbuch [Auftraggeber]“ mit Übernahme in den Auftrag und Eintrag in den Google-Kalender</li>
           <li>Menü in drei Gruppen: Prüfungen, Daten, App</li>
           <li>Prüfungen „Kalender prüfen“, „Offene Tage prüfen“, „Angaben prüfen“, mit Start-Meldung und Ignorieren je Fehler</li>
-        </ul>
+          </ul>
+        </details>
       </li>
       <li>
-        <h3>Version 1.6</h3>
-        <p class="when">Native Neuauflage</p>
-        <ul>
+        <details>
+          <summary><h3>Version 1.6</h3><span class="when">Native Neuauflage</span><span class="count">6 Änderungen</span></summary>
+          <ul>
           <li>Neue Oberfläche: untere Leiste mit Aufträge, Auftraggeber, Kalender, Auswertung</li>
           <li>Auftraggeber als Kacheln, sortierbar, mit Statistik und Detailseite</li>
           <li>Kalender mit Monatssummen, Feiertagen, „+ Planen“, je Auftraggeber eigene Punktfarbe</li>
           <li>Sicherung mit Passwort und 24 Wörtern, verschlüsselt, automatische Sicherung</li>
           <li>App-Sperre, Test-Arbeitgeber mit Beispieldaten, „Gezahlt am“, Monatsabschluss, Jahresübersicht</li>
           <li>Timer-Benachrichtigung, Tag kopieren, Rückgängig, Suche über alles, Hell/Dunkel/System</li>
-        </ul>
+          </ul>
+        </details>
       </li>
       <li>
-        <h3>Version 1.5</h3>
-        <ul>
+        <details>
+          <summary><h3>Version 1.5</h3><span class="count">5 Änderungen</span></summary>
+          <ul>
           <li>Belege-Fotos bei Auslagen (Kamera oder Galerie, mehrere Fotos, verkleinert, bei Löschen mit Bestätigung)</li>
           <li>Datensicherung als ZIP mit Fotos, Speicheranzeige, Auswahl der Daten</li>
           <li>Ersteinrichtung mit direktem Wiederherstellen</li>
           <li>Design an die Vorlage „StreckenBuch“ angepasst, 16 Akzentfarben, Entrümpelung der Listen</li>
           <li>Ersteinrichtung als Vollbild-Einweisung, Fade-Übergänge</li>
-        </ul>
+          </ul>
+        </details>
       </li>
       <li>
-        <h3>Version 1.4</h3>
-        <p class="when">Im Play Store als Update verfügbar</p>
-        <ul>
+        <details>
+          <summary><h3>Version 1.4</h3><span class="when">Im Play Store als Update verfügbar</span><span class="count">6 Änderungen</span></summary>
+          <ul>
           <li>Arbeitstage: Status frei korrigierbar, Hinweis bei vergangenen geplanten Tagen, neuer Status „Entfällt“</li>
           <li>Aufträge: Vorschuss/Abzug als eigenes Menü, „Aus früherem Auftrag übernehmen“ nur für den gewählten Auftraggeber</li>
           <li>Einstellungen: optionale Unterschrift, die in PDFs übernommen wird</li>
           <li>Hilfe/FAQ: neue Einträge zu Arbeitstagen, Aufträgen, Unterschrift, Sprache/PDF und Abrechnung</li>
           <li>Auftragsansicht: Voraussicht neben den Kachelwerten</li>
           <li>„Was ist neu“-Popup nach Updates</li>
-        </ul>
+          </ul>
+        </details>
       </li>
       <li>
-        <h3>Version 1.0 bis 1.3</h3>
-        <p class="when">Grundfunktionen</p>
-        <ul>
+        <details>
+          <summary><h3>Version 1.0 bis 1.3</h3><span class="when">Grundfunktionen</span><span class="count">4 Änderungen</span></summary>
+          <ul>
           <li>Aufträge mit Arbeitstagen, Beginn, Ende und Pausen</li>
           <li>Fahrtstrecke je Arbeitstag, Hin- und Rückfahrt in Kilometern</li>
           <li>Stundensatz und Kilometersatz in den Einstellungen</li>
           <li>Monatliche Auswertung von Arbeitszeit und Strecke</li>
-        </ul>
+          </ul>
+        </details>
       </li>
     </ol>
     
@@ -126,5 +139,13 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  function all(open) { document.querySelectorAll('.timeline details').forEach(function (d) { d.open = open; }); }
+  var o = document.getElementById('open-all'), c = document.getElementById('close-all');
+  if (o) o.addEventListener('click', function () { all(true); });
+  if (c) c.addEventListener('click', function () { all(false); });
+})();
+</script>
 </body>
 </html>
