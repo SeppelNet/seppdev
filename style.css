@@ -129,17 +129,17 @@ h2 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
 
 /* Versionsverlauf */
 .timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--rule); }
-.timeline li { position: relative; padding: 0 0 calc(1.75rem * var(--sp)) 1.5rem; }
-.timeline li::before {
+.timeline > li { position: relative; padding: 0 0 calc(1.75rem * var(--sp)) 1.5rem; }
+.timeline > li::before {
   content: ""; position: absolute; left: -0.5rem; top: 0.35rem;
   width: 0.9rem; height: 0.9rem; border-radius: 50%;
   background: var(--paper); border: 2px solid var(--rule);
 }
-.timeline li.current::before { background: var(--accent); border-color: var(--accent); }
+.timeline > li.current::before { background: var(--accent); border-color: var(--accent); }
 .timeline h3 { margin: 0 0 0.2rem; font-size: 1.15rem; }
 .timeline .when { font-size: 0.9rem; color: var(--ink-soft); margin-bottom: 0.4rem; }
 .timeline ul { margin: 0; padding-left: 1.1rem; color: var(--ink-soft); }
-.timeline li.current .when::after { content: "  ·  aktuell"; color: var(--signal); font-weight: 600; }
+.timeline > li.current .when { color: var(--accent-ink); font-weight: 600; }
 
 /* App-Kopf */
 .app-head { display: grid; grid-template-columns: 7rem 1fr; gap: 1.5rem; align-items: center; padding-block: clamp(2.5rem, 6vw, 4rem); }
@@ -201,3 +201,5 @@ h2 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
 .tester-stand { margin: 0.5rem 0 0; font-size: 0.88rem; color: var(--ink-soft); }
 .tester-stand:empty { display: none; }
 @media (prefers-reduced-motion: reduce) { .tester-count .bar span { transition: none; } }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
