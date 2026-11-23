@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Einstellungen – SeppDev</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+
+<header class="wrap site-head">
+  <a class="brand" href="./">SeppDev</a>
+  <nav class="site-nav" aria-label="Hauptmenü">
+    <a href="einsatzbuch/">Einsatzbuch</a>
+    <a href="./#kontakt">Kontakt</a>
+    <a href="einstellungen.html" aria-current="page">Einstellungen</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="hero" style="padding-bottom:1.5rem;">
+    <h1 style="font-size:clamp(2rem,5vw,3.2rem);">Einstellungen</h1>
+    <p class="lede">Passe die Seite an dich an. Jede Änderung gilt sofort auf allen Seiten und wird in diesem Browser gespeichert.</p>
+  </div>
+
+  <section aria-labelledby="vorschau-titel">
+    <h2 id="vorschau-titel">Vorschau</h2>
+    <div class="preview">
+      <h3>So sieht Text aus</h3>
+      <p>Schriftgröße, Schriftart, Farben und Abstände ändern sich hier sofort. Probiere einfach aus, was dir am besten gefällt.</p>
+      <a class="btn" href="einsatzbuch/">Zur App Einsatzbuch</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="optionen-titel">
+    <h2 id="optionen-titel">Aussehen</h2>
+    <div id="settings"></div>
+    <div class="reset-row">
+      <button id="reset" type="button" class="btn btn-ghost btn-plain">Alles zurücksetzen</button>
+    </div>
+    <noscript><p>Für die Einstellungen muss JavaScript aktiviert sein.</p></noscript>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 SeppDev</span>
+    <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script src="settings.js"></script>
+</body>
+</html>
