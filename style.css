@@ -210,3 +210,7 @@ h2 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
 .timeline.compact .when { font-size: 0.82rem; margin-bottom: 0.2rem; }
 .timeline.compact ul { font-size: 0.9rem; line-height: 1.45; padding-left: 0.9rem; }
 .timeline.compact li li { margin: 0; }
+.timeline.compact p { margin: 0; }
+.timeline.compact .when { margin-bottom: 0.1rem; }
+.timeline.compact ul { line-height: 1.4; }
+.timeline.compact > li { padding-bottom: calc(0.9rem * var(--sp)); }
