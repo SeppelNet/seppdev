@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Einsatzbuch – SeppDev</title>
-  <meta name="description" content="Einsatzbuch: Arbeitszeit, Fahrtstrecke, Aufträge und Auswertungen auf dem Android-Handy.">
+  <title>Einsatzbuch – Beta-Test – SeppDev</title>
+  <meta name="description" content="Einsatzbuch: Arbeitszeit, Fahrtstrecke, Aufträge und Auswertungen auf dem Android-Handy. Jetzt im Beta-Test.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,9 +12,17 @@
 </head>
 <body>
 
+<div class="beta-bar">
+  <div class="wrap">
+    <span><strong>Beta-Test:</strong> Einsatzbuch ist noch in der Testphase.</span>
+    <a href="#testen">Als Tester mitmachen</a>
+  </div>
+</div>
+
 <header class="wrap site-head">
   <a class="brand" href="../">SeppDev</a>
   <nav class="site-nav" aria-label="Hauptmenü">
+    <a href="versionen.html">Versionen</a>
     <a href="../#kontakt">Kontakt</a>
   </nav>
 </header>
@@ -31,27 +39,76 @@
     </svg>
     <div>
       <h1>Einsatzbuch</h1>
-      <p class="lede">Zeiterfassung und Fahrtstrecke für Einsätze, ohne Papierkram.</p>
+      <p class="lede">Arbeitszeit, Fahrtstrecke und Aufträge erfassen. Ohne Papierkram, auf deinem Handy.</p>
     </div>
   </div>
 
-  <section aria-labelledby="funktionen-titel">
-    <h2 id="funktionen-titel">Was die App kann</h2>
-    <ul class="feature-list">
-      <li><strong>Aufträge mit Arbeitstagen</strong><span>Beginn, Ende und Pausen pro Tag, auch bei mehrtägigen Aufträgen.</span></li>
-      <li><strong>Fahrtstrecke</strong><span>Kilometer von deiner Adresse aus, von Hand oder automatisch berechnet.</span></li>
-      <li><strong>Zuschläge</strong><span>Nacht-, Sonntags- und Feiertagszuschläge, je Auftraggeber einstellbar.</span></li>
-      <li><strong>Auswertungen</strong><span>Als PDF oder CSV, getrennt nach Auftraggeber. Mit Unterschrift für die Abgabe.</span></li>
-      <li><strong>Archiv und Datensicherung</strong><span>Abgerechnete Aufträge bleiben erhalten. Sicherungen lassen sich jederzeit speichern.</span></li>
-    </ul>
+  <section id="testen" aria-labelledby="testen-titel">
+    <h2 id="testen-titel">Beta-Tester gesucht</h2>
+    <p class="section-lede">Die App ist im Beta-Test. Wer mitmacht, hilft, Fehler vor dem Start im Play Store zu finden. Die Teilnahme ist kostenlos.</p>
+    <ol class="steps">
+      <li>
+        <div>
+          <h3>Der Tester-Gruppe beitreten</h3>
+          <p>Über die Google-Gruppe <a href="https://groups.google.com/g/einsatzbuch-tester">einsatzbuch-tester</a> anmelden. Dafür brauchst du ein Google-Konto.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Die App im Play Store installieren</h3>
+          <p>Nach der Anmeldung über <a href="https://play.google.com/store/apps/details?id=de.einsatzbuch.app">diesen Link im Play Store</a> installieren.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Ausprobieren und Rückmeldung geben</h3>
+          <p>Fehler, Ideen und Wünsche bitte an <a href="mailto:info@seppdev.de">info@seppdev.de</a> schicken.</p>
+        </div>
+      </li>
+    </ol>
   </section>
 
-  <section aria-labelledby="download-titel">
-    <h2 id="download-titel">Download</h2>
-    <p>
-      <a class="btn" href="#" aria-disabled="true">Bald im Google Play Store</a>
-    </p>
-    <p>Die App ist kostenlos. Datenschutz: <a href="../datenschutz.html">Datenschutzerklärung</a>.</p>
+  <section aria-labelledby="funktionen-titel">
+    <h2 id="funktionen-titel">Was die App kann</h2>
+    <div class="feature-grid">
+      <article class="feature">
+        <h3>Aufträge mit Arbeitstagen</h3>
+        <p>Jeder Tag bekommt Beginn, Ende, Pause und Kilometer. Auch mehrtägige Aufträge, bei denen sich die Zeiten täglich ändern, sind möglich.</p>
+      </article>
+      <article class="feature">
+        <h3>Fahrtstrecke</h3>
+        <p>Die Strecke lässt sich von Hand eintragen oder automatisch berechnen. Die Berechnung nutzt einen eigenen, kostenlosen Schlüssel.</p>
+      </article>
+      <article class="feature">
+        <h3>Vergütung je Auftraggeber</h3>
+        <p>Stundenlohn oder Festgehalt, dazu Euro je Kilometer oder eine Fahrtpauschale pro Tag. Jeder Auftraggeber hat eigene Sätze.</p>
+      </article>
+      <article class="feature">
+        <h3>Zuschläge</h3>
+        <p>Nacht-, Sonntags- und Feiertagszuschläge in Prozent. Sie werden am Tag vorgeschlagen, wenn beim Auftraggeber aktiviert.</p>
+      </article>
+      <article class="feature">
+        <h3>Auswertungen als PDF oder CSV</h3>
+        <p>Eine Fassung für den Auftraggeber ohne Beträge, eine für deine eigenen Unterlagen. Abrechnung je Auftrag oder Monat, mit frei wählbarem Zeitraum.</p>
+      </article>
+      <article class="feature">
+        <h3>Vorschuss und Abzug</h3>
+        <p>Beträge, die vom Ergebnis abgezogen werden, hängen am Auftrag und erscheinen im Nachweis.</p>
+      </article>
+      <article class="feature">
+        <h3>Archiv und Datensicherung</h3>
+        <p>Abgerechnete Aufträge wandern nach zwei Monaten ins Archiv. Die Datensicherung enthält alle Daten, auch die Kasse.</p>
+      </article>
+      <article class="feature">
+        <h3>Kasse nur für dich</h3>
+        <p>Trinkgeld und Einnahmen notierst du pro Arbeitstag. Diese Werte erscheinen nie in den Auswertungen.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="daten-titel">
+    <h2 id="daten-titel">Datenschutz</h2>
+    <p>Die App speichert deine Daten auf deinem Handy. Die Datenschutzerklärung findest du <a href="../datenschutz.html">hier</a>.</p>
   </section>
 
 </main>

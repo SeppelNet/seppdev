@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SeppDev – Apps für den Arbeitsalltag</title>
-  <meta name="description" content="SeppDev baut kleine, praktische Apps. Zum Beispiel Einsatzbuch für Arbeitszeit, Strecke und Auswertungen.">
+  <meta name="description" content="SeppDev baut kleine, praktische Apps. Aktuell im Beta-Test: Einsatzbuch für Arbeitszeit, Strecke und Auswertungen.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,8 +12,15 @@
 </head>
 <body>
 
+<div class="beta-bar">
+  <div class="wrap">
+    <span><strong>Beta-Test:</strong> Einsatzbuch sucht neue Tester.</span>
+    <a href="einsatzbuch/#testen">Jetzt mitmachen</a>
+  </div>
+</div>
+
 <header class="wrap site-head">
-  <a class="brand" href="/">SeppDev</a>
+  <a class="brand" href="./">SeppDev</a>
   <nav class="site-nav" aria-label="Hauptmenü">
     <a href="einsatzbuch/">Einsatzbuch</a>
     <a href="#kontakt">Kontakt</a>
@@ -23,33 +30,35 @@
 <main class="wrap">
 
   <div class="hero">
-    <h1>Kleine Apps, die im Alltag helfen.</h1>
-    <p class="lede">SeppDev entwickelt eigene Android-Apps für konkrete Aufgaben. Ohne Abo, ohne Werbung, mit deinen Daten auf deinem Gerät.</p>
+    <h1>Kleine Apps, die im Arbeitsalltag helfen.</h1>
+    <p class="lede">SeppDev entwickelt eigene Android-Apps für konkrete Aufgaben. Ohne Abo, ohne Werbung. Deine Daten bleiben auf deinem Gerät.</p>
+    <div class="hero-actions">
+      <a class="btn" href="einsatzbuch/">Zur App Einsatzbuch</a>
+      <a class="btn btn-ghost" href="einsatzbuch/#testen">Als Tester mitmachen</a>
+    </div>
   </div>
 
   <section aria-labelledby="apps-titel">
     <h2 id="apps-titel">Apps</h2>
-    <ul class="ledger">
-      <li>
-        <svg class="app-icon" viewBox="0 0 72 72" aria-hidden="true">
-          <rect width="72" height="72" rx="16" fill="#1d5fb8"/>
-          <rect x="20" y="16" width="32" height="42" rx="4" fill="#ffffff"/>
-          <rect x="28" y="12" width="16" height="8" rx="2" fill="#0f3d7a"/>
-          <circle cx="36" cy="38" r="9" fill="none" stroke="#1d5fb8" stroke-width="3"/>
-          <path d="M36 33v5l3 2" stroke="#1d5fb8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        </svg>
-        <div>
-          <h3><a href="einsatzbuch/">Einsatzbuch</a></h3>
-          <p>Arbeitszeiten, Fahrtstrecke und Aufträge erfassen. Auswertungen als PDF oder CSV, auf Wunsch mit Unterschrift.</p>
-          <p class="meta"><a href="einsatzbuch/">Mehr erfahren</a></p>
-        </div>
-      </li>
-    </ul>
+    <p class="section-lede">Zurzeit gibt es eine App. Weitere folgen, wenn sie fertig sind.</p>
+    <a href="einsatzbuch/" style="display:flex; gap:1.25rem; align-items:center; text-decoration:none;">
+      <svg class="app-icon" width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+        <rect width="72" height="72" rx="16" fill="#1d5fb8"/>
+        <rect x="20" y="16" width="32" height="42" rx="4" fill="#ffffff"/>
+        <rect x="28" y="12" width="16" height="8" rx="2" fill="#0f3d7a"/>
+        <circle cx="36" cy="38" r="9" fill="none" stroke="#1d5fb8" stroke-width="3"/>
+        <path d="M36 33v5l3 2" stroke="#1d5fb8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span>
+        <strong style="font-size:1.25rem;">Einsatzbuch</strong><br>
+        <span style="color:var(--ink-soft);">Beta · Arbeitszeit, Strecke und Auswertungen</span>
+      </span>
+    </a>
   </section>
 
   <section id="kontakt" aria-labelledby="kontakt-titel">
     <h2 id="kontakt-titel">Kontakt</h2>
-    <p>Fragen, Fehler oder Wünsche bitte an <a href="mailto:info@seppdev.de">info@seppdev.de</a>.</p>
+    <p>Fragen, Fehler oder Wünsche: <a href="mailto:info@seppdev.de">info@seppdev.de</a></p>
   </section>
 
 </main>
