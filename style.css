@@ -189,3 +189,15 @@ h2 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
 .preview { background: var(--card); border-left: 4px solid var(--accent); border-radius: calc(0.8rem * var(--rs)); padding: 1.25rem; margin-bottom: 2rem; }
 .preview h3 { margin: 0 0 0.4rem; }
 .preview p { margin: 0 0 1rem; color: var(--ink-soft); max-width: var(--measure); }
+
+/* Tester-Zähler */
+.tester-count { background: var(--card); border-left: 4px solid var(--accent); border-radius: calc(0.8rem * var(--rs)); padding: 1rem 1.25rem; margin: 0 0 1.5rem; }
+.tester-count[hidden] { display: none; }
+.tester-line { margin: 0 0 0.6rem; }
+.tester-line strong { font-size: 1.8rem; letter-spacing: -0.02em; margin-right: 0.25rem; }
+.tester-count .bar { height: 0.7rem; background: var(--rule); border-radius: 999px; overflow: hidden; }
+.tester-count .bar[hidden] { display: none; }
+.tester-count .bar span { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 999px; transition: width .6s ease; }
+.tester-stand { margin: 0.5rem 0 0; font-size: 0.88rem; color: var(--ink-soft); }
+.tester-stand:empty { display: none; }
+@media (prefers-reduced-motion: reduce) { .tester-count .bar span { transition: none; } }
