@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Versionsverlauf – StreckenBuch – SeppDev</title>
+  <meta name="description" content="Versionsverlauf der App StreckenBuch: was sich in jeder Version geändert hat.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../theme.js"></script>
+</head>
+<body>
+
+<div class="beta-bar">
+  <div class="wrap">
+    <span><strong>In Arbeit:</strong> StreckenBuch ist noch in Entwicklung.</span>
+    <a href="index.html#testen">Als Tester vormerken</a>
+  </div>
+</div>
+
+<header class="wrap site-head">
+  <a class="brand" href="../">SeppDev</a>
+  <nav class="site-nav" aria-label="Hauptmenü">
+    <a href="index.html">StreckenBuch</a>
+    <a href="../#kontakt">Kontakt</a>
+    <a href="../einstellungen.html">Einstellungen</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <div class="hero" style="padding-bottom:1.5rem;">
+    <h1 style="font-size:clamp(2rem,5vw,3.2rem);">Versionsverlauf</h1>
+    <p class="lede">StreckenBuch. Stand: 25.11.2026</p>
+  </div>
+
+  <section aria-labelledby="verlauf-titel">
+    <h2 id="verlauf-titel" class="visually-hidden">Alle Versionen</h2>
+    <div class="tl-tools">
+      <button type="button" class="btn btn-ghost btn-plain btn-small" id="open-all">Alle aufklappen</button>
+      <button type="button" class="btn btn-ghost btn-plain btn-small" id="close-all">Alle zuklappen</button>
+    </div>
+    <ol class="timeline compact">
+      <li class="current">
+        <details open>
+          <summary><h3>Version 0.1</h3><span class="when">In Arbeit</span><span class="count">2 Änderungen</span></summary>
+          <ul>
+            <li>Fahrtenbuch als Grundlage der App</li>
+            <li>Tankpreise als Option, mit eigenem Zugang (Key) von Tankerkönig je Nutzer</li>
+          </ul>
+        </details>
+      </li>
+    </ol>
+    
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 SeppDev</span>
+    <span><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  function all(open) { document.querySelectorAll('.timeline details').forEach(function (d) { d.open = open; }); }
+  var o = document.getElementById('open-all'), c = document.getElementById('close-all');
+  if (o) o.addEventListener('click', function () { all(true); });
+  if (c) c.addEventListener('click', function () { all(false); });
+})();
+</script>
+</body>
+</html>

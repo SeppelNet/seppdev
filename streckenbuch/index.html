@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>StreckenBuch – SeppDev</title>
-  <meta name="description" content="StreckenBuch: Neue Android-App von SeppDev. In Vorbereitung.">
+  <title>StreckenBuch – Beta-Test – SeppDev</title>
+  <meta name="description" content="StreckenBuch: Fahrtenbuch-App für Android, optional mit Tankpreisen. In Arbeit, Tester gesucht.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
@@ -13,9 +13,17 @@
 </head>
 <body>
 
+<div class="beta-bar">
+  <div class="wrap">
+    <span><strong>In Arbeit:</strong> StreckenBuch ist noch in Entwicklung.</span>
+    <a href="#testen">Als Tester vormerken</a>
+  </div>
+</div>
+
 <header class="wrap site-head">
   <a class="brand" href="../">SeppDev</a>
   <nav class="site-nav" aria-label="Hauptmenü">
+    <a href="versionen.html">Versionen</a>
     <a href="../einsatzbuch/">Einsatzbuch</a>
     <a href="../#kontakt">Kontakt</a>
     <a href="../einstellungen.html">Einstellungen</a>
@@ -23,23 +31,68 @@
 </header>
 
 <main class="wrap">
+
   <div class="app-head">
     <img class="app-icon" src="icon.png" width="112" height="112" alt="StreckenBuch-Icon">
     <div>
       <h1>StreckenBuch</h1>
-      <p class="lede">Eine neue App von SeppDev. Mehr dazu folgt bald.</p>
+      <p class="lede">Ein Fahrtenbuch für dein Handy, auf Wunsch mit aktuellen Tankpreisen.</p>
     </div>
   </div>
 
-  <section>
-    <h2>Stand</h2>
-    <p>Die App ist in Vorbereitung. Hier folgen bald eine Beschreibung, Screenshots und der Weg zum Beta-Test.</p>
+  <section id="testen" aria-labelledby="testen-titel">
+    <h2 id="testen-titel">Tester gesucht</h2>
+    <p class="section-lede">StreckenBuch ist in Arbeit (Version 0.1). Wer beim Test mitmacht, hilft, Fehler vor dem Start zu finden. Die Teilnahme ist kostenlos.</p>
+    <div id="testers" class="tester-count" hidden>
+      <p class="tester-line"><strong id="testers-num"></strong> <span id="testers-text"></span></p>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="0" aria-label="Aktive Tester"><span id="testers-fill"></span></div>
+      <p class="tester-stand" id="testers-stand"></p>
+    </div>
+    <ol class="steps">
+      <li>
+        <div>
+          <h3>Tester-Gruppe und Play Store</h3>
+          <p>Der Beta-Test startet in Kürze. Den Link zur Tester-Gruppe und zum Play Store gibt es dann hier.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Jetzt vormerken</h3>
+          <p>Wer von Anfang an dabei sein will, schreibt kurz an <a href="mailto:info@seppdev.de">info@seppdev.de</a>.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Ausprobieren und Rückmeldung geben</h3>
+          <p>Fehler, Ideen und Wünsche bitte ebenfalls an <a href="mailto:info@seppdev.de">info@seppdev.de</a> schicken.</p>
+        </div>
+      </li>
+    </ol>
   </section>
 
-  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Fragen oder Wünsche: <a href="mailto:info@seppdev.de">info@seppdev.de</a></p>
+  <section aria-labelledby="funktionen-titel">
+    <h2 id="funktionen-titel">Was die App kann</h2>
+    <div class="feature-grid">
+      <article class="feature">
+        <h3>Fahrtenbuch</h3>
+        <p>Deine Fahrten halten StreckenBuch auf dem Handy fest, damit du sie später nachschlagen kannst.</p>
+      </article>
+      <article class="feature">
+        <h3>Tankpreise (optional)</h3>
+        <p>Auf Wunsch zeigt die App aktuelle Spritpreise an. Dafür beantragt jeder Nutzer seinen eigenen, kostenlosen Zugang bei Tankerkönig und trägt ihn in der App ein.</p>
+      </article>
+      <article class="feature">
+        <h3>Weitere Funktionen folgen</h3>
+        <p>Die App ist in Arbeit. Neue Funktionen erscheinen hier und im Versionsverlauf.</p>
+      </article>
+    </div>
   </section>
+
+  <section aria-labelledby="daten-titel">
+    <h2 id="daten-titel">Datenschutz</h2>
+    <p>Die Datenschutzerklärung für StreckenBuch folgt zur Veröffentlichung der App.</p>
+  </section>
+
 </main>
 
 <footer class="site-foot">
@@ -49,5 +102,30 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var box = document.getElementById('testers');
+  if (!box || !window.fetch) return;
+  fetch('testers.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
+    var a = d.aktiv, z = d.ziel;
+    if (typeof a !== 'number' || a < 0) return;
+    document.getElementById('testers-num').textContent = a;
+    var done = typeof z === 'number' && z > 0 && a >= z;
+    document.getElementById('testers-text').textContent = !z ? (a === 1 ? 'aktiver Tester' : 'aktive Tester')
+      : done ? 'aktive Tester. Das Ziel von ' + z + ' ist erreicht, danke! Weitere sind willkommen.'
+      : 'von ' + z + ' Testern aktiv';
+    var bar = box.querySelector('.bar');
+    if (z > 0) {
+      bar.setAttribute('aria-valuenow', Math.min(a, z)); bar.setAttribute('aria-valuemax', z);
+      document.getElementById('testers-fill').style.width = Math.min(100, Math.round(a / z * 100)) + '%';
+    } else { bar.hidden = true; }
+    if (d.stand) {
+      var dt = new Date(d.stand);
+      document.getElementById('testers-stand').textContent = 'Stand: ' + (isNaN(dt) ? d.stand : dt.toLocaleDateString('de-DE'));
+    }
+    box.hidden = false;
+  }).catch(function () {});
+})();
+</script>
 </body>
 </html>
