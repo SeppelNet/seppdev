@@ -238,3 +238,11 @@ h2 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
 @media (prefers-reduced-motion: reduce) { .timeline details summary::after { transition: none; } }
 .timeline details h4 { margin: 0.55rem 0 0.1rem; font-size: 0.85rem; color: var(--ink); }
 .timeline details h4 + ul { margin-top: 0.1rem; }
+
+/* Laufschrift in der blauen Leiste */
+.beta-bar.ticker { overflow: hidden; padding-inline: 0; }
+.ticker-track { display: flex; width: max-content; animation: ticker-run 30s linear infinite; }
+.ticker:hover .ticker-track, .ticker:focus-within .ticker-track { animation-play-state: paused; }
+.ticker-seg { display: flex; flex: none; }
+.ticker-item { flex: none; white-space: nowrap; padding-right: 4rem; }
+@keyframes ticker-run { to { transform: translateX(-50%); } }
